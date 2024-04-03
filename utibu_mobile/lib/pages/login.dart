@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:utibu_mobile/components/textfield.dart';
 import 'package:utibu_mobile/components/sign_in_button.dart';
+import 'package:utibu_mobile/pages/intro_screen.dart';
 
 class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+  LoginPage({Key? key});
   
   // Controllers for Text Editing
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   // Method to SIgn In User
-  void signUserIn() {}
+  void signUserIn(BuildContext context) {
+    // Navigate to the home page using Navigator
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => IntroScreen()), // Assuming HomePage is a StatelessWidget
+    );
+  }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +70,7 @@ class LoginPage extends StatelessWidget {
 
                 // sign in button
                 SignInButton(
-                  onTap: signUserIn,
+                  onTap: () => signUserIn(context),
                 ),
 
                 const SizedBox(height: 20),
