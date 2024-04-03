@@ -9,6 +9,9 @@ class LoginPage extends StatelessWidget {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
+  // Method to SIgn In User
+  void signUserIn() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,7 +61,9 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 15),
 
                 // sign in button
-                SignInButton(),
+                SignInButton(
+                  onTap: signUserIn,
+                ),
 
                 const SizedBox(height: 20),
 
@@ -68,7 +73,26 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(color: Color.fromARGB(255, 82, 173, 248)),
                   ),
 
+                const SizedBox(height: 20),
+
                 // Register user option
+                Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Not a member?',
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
+                  const SizedBox(width: 4),
+                  const Text(
+                    'Register now',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 82, 173, 248),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+                ),
               ],
             ),
           ),
