@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utibu_mobile/components/textfield.dart';
+import 'package:utibu_mobile/components/sign_in_button.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -45,7 +46,7 @@ class LoginPage extends StatelessWidget {
                   obscureText: false,
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 25),
 
                 // password textfield
                 CustomTextField(
@@ -54,9 +55,18 @@ class LoginPage extends StatelessWidget {
                   obscureText: true,
                 ),
 
+                const SizedBox(height: 15),
+
                 // sign in button
+                SignInButton(),
+
+                const SizedBox(height: 20),
 
                 // forgot password option
+                Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: Color.fromARGB(255, 82, 173, 248)),
+                  ),
 
                 // Register user option
               ],
