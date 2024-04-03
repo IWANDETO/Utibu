@@ -3,7 +3,7 @@ import 'package:utibu_mobile/components/textfield.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
-
+  
   // Controllers for Text Editing
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -15,7 +15,7 @@ class LoginPage extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
-              children: const [
+              children: [
                 const SizedBox(height: 50),
 
                 //logo icon
